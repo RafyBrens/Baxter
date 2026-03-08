@@ -189,7 +189,7 @@ export default function ChatArea({
     if (item.type === 'loading') {
       return (
         <View style={styles.botRow}>
-          <Avatar fallback="BU" size={32} style={styles.avatar} />
+          <Avatar fallback="B" size={32} style={styles.avatar} />
           <View style={styles.loadingBubble}>
             <Animated.View style={[styles.dot, { transform: [{ translateY: dot1 }] }]} />
             <Animated.View style={[styles.dot, { transform: [{ translateY: dot2 }] }]} />
@@ -205,7 +205,7 @@ export default function ChatArea({
 
       return (
         <View style={styles.botRow}>
-          <Avatar fallback="BU" size={32} style={styles.avatar} />
+          <Avatar fallback="B" size={32} style={styles.avatar} />
           <View style={{ flex: 1 }}>
             {cleanedStream.length > 0 && (
               <View style={styles.botBubble}>
@@ -269,7 +269,7 @@ export default function ChatArea({
 
     return (
       <View style={styles.botRow}>
-        <Avatar fallback="BU" size={32} style={styles.avatar} />
+        <Avatar fallback="B" size={32} style={styles.avatar} />
         <View style={{ flex: 1 }}>
           <View style={styles.botBubble}>
             <Text style={styles.botText}>{displayText}</Text>
@@ -335,12 +335,12 @@ export default function ChatArea({
           <TouchableOpacity onPress={onToggleSidebar} style={styles.menuButton}>
             <Ionicons name="menu" size={22} color={colors.textSecondary} />
           </TouchableOpacity>
-          <Avatar fallback="BU" size={32} />
+          <Avatar fallback="B" size={32} />
           <View style={styles.headerTextWrap}>
             <Text style={styles.headerTitle} numberOfLines={1}>
-              {currentChat?.title || 'Binghamton University AI'}
+              {currentChat?.title || 'Ask Baxter'}
             </Text>
-            <Text style={styles.headerSubtitle}>Your intelligent campus assistant</Text>
+            <Text style={styles.headerSubtitle}>Your Binghamton University AI assistant</Text>
           </View>
         </View>
         {currentChat && (

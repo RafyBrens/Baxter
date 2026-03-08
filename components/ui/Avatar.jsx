@@ -3,26 +3,14 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import Colors from '../../constants/Colors';
 
 const colors = Colors.light;
+const BAXTER_LOGO = require('../../assets/baxter-logo.jpg');
 
-/**
- * Simple Avatar component.
- *
- * Props:
- *  - source (ImageSource) - image URI or require
- *  - fallback (string) - text to show when no image
- *  - size (number) - width/height in px (default: 32)
- *  - style - extra styles
- */
 export default function Avatar({ source, fallback, size = 32, style }) {
+  const imgSource = source || BAXTER_LOGO;
+
   return (
-    <View style={[styles.container, { width: size, height: size, borderRadius: size / 4 }, style]}>
-      {source ? (
-        <Image source={source} style={[styles.image, { width: size, height: size }]} resizeMode="contain" />
-      ) : (
-        <Text style={[styles.fallback, { fontSize: size * 0.4 }]}>
-          {fallback || 'BU'}
-        </Text>
-      )}
+    <View style={[styles.container, { width: size, height: size, borderRadius: size / 2 }, style]}>
+      <Image source={imgSource} style={[styles.image, { width: size, height: size, borderRadius: size / 2 }]} resizeMode="cover" />
     </View>
   );
 }

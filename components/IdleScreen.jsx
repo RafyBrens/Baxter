@@ -46,8 +46,8 @@ export default function IdleScreen({ visible, onDismiss }) {
     <TouchableWithoutFeedback onPress={onDismiss}>
       <Animated.View style={[styles.overlay, { opacity: fadeAnim }]}>
         <View style={styles.content}>
-          <Avatar fallback="BU" size={100} />
-          <Text style={styles.title}>Binghamton University AI</Text>
+          <Avatar fallback="Ask Baxter" size={160} />
+          <Text style={styles.title}>Ask Baxter</Text>
           <Text style={styles.subtitle}>Tap anywhere to start</Text>
 
           <View style={styles.promptBox}>

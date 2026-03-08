@@ -229,7 +229,7 @@ export default function ChatInterface() {
               </View>
             )}
             <View style={styles.inputRow}>
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 style={[styles.micButton, isListening && styles.micButtonActive]}
                 onPress={handleMicPress}
               >
@@ -238,7 +238,7 @@ export default function ChatInterface() {
                   size={20}
                   color={isListening ? '#fff' : colors.textSecondary}
                 />
-              </TouchableOpacity>
+              </TouchableOpacity> */}
               <TextInput
                 ref={inputRef}
                 style={styles.input}

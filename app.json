@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Bot Bu",
-    "slug": "bot-bu-mobile",
+    "name": "Ask Baxter",
+    "slug": "baxter-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

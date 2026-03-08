@@ -81,7 +81,7 @@ export default function EmptyState({
       >
         <View style={styles.hero}>
           <View style={styles.logoWrapper}>
-            <Avatar fallback="BU" size={80} />
+            <Avatar fallback="Ask Baxter" size={160}/>
           </View>
           <Text style={styles.heading}>How can I help you?</Text>
           <Text style={styles.subtitle}>Ask me anything about Binghamton University</Text>
@@ -107,7 +107,7 @@ export default function EmptyState({
 
       <View style={styles.inputWrapper}>
         <View style={styles.inputRow}>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={[styles.micButton, isListening && styles.micButtonActive]}
             onPress={() => { onMicPress?.(); inputRef.current?.focus(); }}
           >
@@ -116,7 +116,7 @@ export default function EmptyState({
               size={20}
               color={isListening ? '#fff' : colors.textSecondary}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           <TextInput
             ref={inputRef}
             style={styles.input}

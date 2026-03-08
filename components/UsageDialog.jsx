@@ -49,7 +49,7 @@ export default function UsageDialog({ visible, onClose }) {
     <Dialog
       visible={visible}
       onClose={onClose}
-      title="Bot Bu Global Usage"
+      title="Baxter Global Usage"
       description="Real-time API usage statistics for all users"
       titleIcon={<Ionicons name="people" size={20} color={colors.primary} />}
     >
@@ -124,7 +124,7 @@ export default function UsageDialog({ visible, onClose }) {
             <View style={{ flex: 1 }}>
               <Text style={styles.infoTitle}>Shared Across All Users</Text>
               <Text style={styles.infoText}>
-                These limits are global for the entire Bot Bu application. All users share the same API quota.
+                These limits are global for the entire Baxter application. All users share the same API quota.
               </Text>
             </View>
           </View>

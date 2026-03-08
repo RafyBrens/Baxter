@@ -3,6 +3,7 @@ import {
   View,
   Text,
   TextInput,
+  Image,
   TouchableOpacity,
   StyleSheet,
   Dimensions,
@@ -10,6 +11,8 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../constants/Colors';
 import ScrollArea from './ui/ScrollArea';
+
+const BAXTER_LOGO = require('../assets/baxter-logo.jpg');
 import Button from './ui/Button';
 import { getTimestamp } from '../lib/chatStorage';
 
@@ -56,10 +59,8 @@ export default function Sidebar({
         {/* Header */}
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <View style={styles.logoBox}>
-              <Text style={styles.logoText}>BU</Text>
-            </View>
-            <Text style={styles.brandName}>Bot Bu</Text>
+            <Image source={BAXTER_LOGO} style={styles.logoImage} width={36} height={36} />
+            <Text style={styles.brandName}>Ask Baxter</Text>
           </View>
           <TouchableOpacity onPress={onClose} style={styles.closeButton}>
             <Ionicons name="close" size={22} color={colors.sidebarMuted} />
@@ -168,18 +169,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
   },
-  logoBox: {
-    width: 32,
-    height: 32,
-    borderRadius: 8,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logoText: {
-    fontWeight: '800',
-    fontSize: 14,
-    color: colors.primary,
+  logoImage: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
   },
   brandName: {
     fontSize: 18,
